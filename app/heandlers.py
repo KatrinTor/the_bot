@@ -1,4 +1,4 @@
-from aiogram import F, Router
+from aiogram import Router
 from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
@@ -45,5 +45,5 @@ async def done(message: Message, state: FSMContext):
 
 
 @router.message(Command('help'))
-async def update_first(message: Message):
+async def help(message: Message):
     await message.answer('Помощи тут пока нет :(')
