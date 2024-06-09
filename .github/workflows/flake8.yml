@@ -3,20 +3,29 @@ name: Flake8 Check
 on: [ push ]
 
 jobs:
-  nodejs:
+  flake8:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python and Node.js
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: |
-          npm install -g flake8
+      - name: Check Node.js version
+        run: node --version
 
       - name: Run Flake8
         run: |
