@@ -3,6 +3,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
+from app.database.answer import add_question_answer
 from app.message import TextMessage
 from app.questions_state import THE_ASKER
 
@@ -38,6 +39,10 @@ async def third_answer(message: Message, state: FSMContext):
 async def done(message: Message, state: FSMContext):
     await state.update_data(tr=message.text)
     data = await state.get_data()
+    add_question_answer(1, answer_text=data['fi'])
+    add_question_answer(2, answer_text=data['sec'])
+    add_question_answer(3, answer_text=data['tr'])
+
     await message.answer(f'Твои ответы:\n\n'
                          f'{TextMessage.FEEL_NOW}:\n{data["fi"]}\n\n'
                          f'{TextMessage.WANT_TO_FEEL}:\n{data["sec"]}\n\n'
