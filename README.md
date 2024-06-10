@@ -1,11 +1,11 @@
 <div id="header" align="center">
     <img src="/images/in_progress.gif" width="125">
-</div>
-
 <div id="text" style="font-size: 24px; font-weight: bold; text-align: center;">
     🚧 Project In Progress 🚧
 </div>
+</div>
 
+----------
 
 This project is a Telegram bot designed to help users maintain a feelings diary. Inspired by my therapist's assignment.
 
