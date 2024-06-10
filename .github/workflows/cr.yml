@@ -15,7 +15,7 @@ jobs:
       - uses: anc95/ChatGPT-CodeReview@v1.0.11
         with:
           paths-ignore: |
-            actions/
+            .github/
             src/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
