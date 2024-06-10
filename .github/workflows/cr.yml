@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: anc95/ChatGPT-CodeReview@v1.0.11
+        if: github.event_name == 'workflow_dispatch'
         with:
           paths-ignore: |
             .github/
