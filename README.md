@@ -7,7 +7,6 @@
 
 ----------
 
-
 This project is a Telegram bot designed to help users maintain a feelings diary. Inspired by my therapist's assignment.
 
 There are three questions that, when answered regularly, will help you better understand your experiences and needs.
@@ -16,4 +15,4 @@ The bot allows users to respond to these questions at their convenience and save
 Users will later have the option to download their diary in a convenient format.
 
 
-###### P.s. but repository is linked to project
+###### P.s. but repository is linked to project.
