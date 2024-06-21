@@ -16,4 +16,4 @@ The bot allows users to respond to these questions at their convenience and save
 Users will later have the option to download their diary in a convenient format.
 
 
-###### P.s. but repository is linked to project
+###### P.s. but repository is linked to project.
